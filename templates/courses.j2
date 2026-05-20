@@ -1,0 +1,6 @@
+Here are the course reminders for your program ({{ program }}):
+{% for course in courses %}
+- {{ course.name }}: {{ course.reminder }} (Due: {{ course.due_date[:10] }})
+{% endfor %}
+
+Please write a brief, helpful summary reminding the student of these tasks.

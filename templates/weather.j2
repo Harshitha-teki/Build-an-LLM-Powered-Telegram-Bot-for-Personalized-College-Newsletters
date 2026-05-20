@@ -1,0 +1,6 @@
+Here is the weather forecast for the week in {{ location }}:
+{% for day in weather %}
+- {{ day.date[:10] }}: {{ day.temp }}°C, {{ day.condition }}
+{% endfor %}
+
+Please write a brief, cheerful weather outlook based on this data.

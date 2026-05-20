@@ -1,0 +1,38 @@
+.env
+.env.*
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+.coverage
+.pytest_cache/
+.mypy_cache/
+
+# Python build/dist
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Keep the SQLite DB in the repo for evaluation (do not ignore data/newsletter.db)
+# If you want to ignore all DBs locally, uncomment the next line, but ensure newsletter.db is present for submission
+# data/*.db

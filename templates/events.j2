@@ -1,0 +1,6 @@
+Here are the upcoming campus events for this week:
+{% for event in events %}
+- {{ event.name }} on {{ event.event_date[:10] }}: {{ event.description }}
+{% endfor %}
+
+Please write a brief, engaging summary of these events for a student newsletter.
