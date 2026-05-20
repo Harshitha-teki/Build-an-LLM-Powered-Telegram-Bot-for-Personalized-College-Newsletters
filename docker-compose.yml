@@ -8,8 +8,9 @@ services:
     volumes:
       - ./data:/app/data
       - ./submission.json:/app/submission.json:ro
+    # Use .env for real secrets; .env.example remains in the repo as a template
     env_file:
-      - .env.example
+      - .env
     depends_on:
       ollama:
         condition: service_healthy
@@ -29,7 +30,7 @@ services:
       - ollama_data:/root/.ollama
     entrypoint: ["/bin/sh", "-c"]
     command: >
-      "ollama serve & sleep 5 && ollama pull llama3.1:8b && wait"
+      "ollama serve & sleep 5 && ollama pull mistral:7b && wait"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
       interval: 10s
